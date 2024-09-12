@@ -1,0 +1,30 @@
+apiVersion: eventstreams.ibm.com/v1beta2
+kind: KafkaUser
+metadata:
+  name: kafka-demo-apps
+  namespace: event-automation
+  labels:
+    eventstreams.ibm.com/cluster: my-kafka-cluster
+spec:
+  quotas:
+    consumerByteRate: 75000000
+    producerByteRate: 75000000
+  authentication:
+    type: scram-sha-512
+  authorization:
+    type: simple
+    acls:
+      - resource:
+          type: topic
+          name: '*'
+          patternType: literal
+        operations:
+          - Write
+          - Read
+          - Create
+      - resource:
+          type: group
+          name: '*'
+          patternType: literal
+        operations:
+          - Read

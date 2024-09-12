@@ -1,0 +1,13 @@
+dalelane@dales-mbp eem-quotas % oc apply -f consume-unlimited.yaml
+job.batch/consumer-unlimited created
+dalelane@dales-mbp eem-quotas % oc logs -f --selector app=consumer-unlimited
+start.time,              end.time,                data.consumed.in.MB, MB.sec,  data.consumed.in.nMsg, nMsg.sec,    rebalance.time.ms, fetch.time.ms, fetch.MB.sec, fetch.nMsg.sec
+2024-09-06 16:16:51:674, 2024-09-06 16:17:15:679, 610.3760,            25.6374, 5000200,               210021.8414, 3759,              20049,         30.4442,      249398.9725
+
+dalelane@dales-mbp eem-quotas % oc delete -f consume-unlimited.yaml
+job.batch "consumer-unlimited" deleted
+dalelane@dales-mbp eem-quotas % oc apply -f consume-unlimited.yaml
+job.batch/consumer-unlimited created
+dalelane@dales-mbp eem-quotas % oc logs -f --selector app=consumer-unlimited
+start.time,              end.time,                data.consumed.in.MB, MB.sec,  data.consumed.in.nMsg, nMsg.sec,    rebalance.time.ms, fetch.time.ms, fetch.MB.sec, fetch.nMsg.sec
+2024-09-06 16:20:43:610, 2024-09-06 16:21:06:234, 610.4038,            26.4427, 5000428,               216618.7836, 3806,              19278,         31.6632,      259385.2059

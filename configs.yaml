@@ -1,0 +1,152 @@
+kind: Secret
+apiVersion: v1
+metadata:
+  name: eem-ca-cert
+  namespace: event-automation
+type: Opaque
+data:
+  eem-ca.pem: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUtiRENDQ1ZTZ0F3SUJBZ0lSQU5HN002ajJXcDhzWGRIcU9ueUVlUFF3RFFZSktvWklodmNOQVFFTEJRQXcKVURFbU1DUUdBMVVFQ2hNZFNVSk5JRVYyWlc1MElFVnVaSEJ2YVc1MElFMWhibUZuWlcxbGJuUXhKakFrQmdOVgpCQU1USFVsQ1RTQkZkbVZ1ZENCRmJtUndiMmx1ZENCTllXNWhaMlZ0Wlc1ME1CNFhEVEkwTURrd01URXlNREl4Ck5Wb1hEVEkwTVRFek1ERXlNREl4TlZvd0tERW1NQ1FHQTFVRUNoTWRTVUpOSUVWMlpXNTBJRVZ1WkhCdmFXNTAKSUUxaGJtRm5aVzFsYm5Rd2dnRWlNQTBHQ1NxR1NJYjNEUUVCQVFVQUE0SUJEd0F3Z2dFS0FvSUJBUUN2ODY2bAp5U2tjb0NpSmRnU2ZTMmxUWGJBazlyYnhtdnd3eEdSVzd6clZMY3VUSTdza3dsWU1vQ2tza1J6ZTZFSlYySWFtCjRseUhuc0hoN2N4RG5rV3BOc3pHZXFlTHFWOWhuYzFlNDVCaEtuZnZrUExmTGtFNXRPY0JINm92T3dwaW01VysKL09oZDRnWi9SWURmODlUcTBkZUtVbElLWnZMZ2dvM1hVRUJlNDNRNzdlZzJaS0MxbG1hWWlwYTBjTktyeGVHUwpwMVBWVHpsT3VscnpzejdNbzNHa2xPNlNsb1NKaVBCd1ozU1lPUTZwblFMWkZtM0xoK2dtdC8zUlRZQ21mb2pFClppbEEvcFVnWHl0eWxkQmZ5bytvTVJhcWh3MFNPaExwcFZUNnVTUEhMME5LODAzR0gvTk5yLytyMi9yN3ZxYjgKUlV1WVZKQUtFS1JkVzR4TEFnTUJBQUdqZ2dkbk1JSUhZekFPQmdOVkhROEJBZjhFQkFNQ0I0QXdIUVlEVlIwbApCQll3RkFZSUt3WUJCUVVIQXdJR0NDc0dBUVVGQndNQk1Bd0dBMVVkRXdFQi93UUNNQUF3SHdZRFZSMGpCQmd3CkZvQVVDVllPY2FWSkJyT0Q4TFI3Y3UxZE1KNEN6d1V3Z2djQkJnTlZIUkVFZ2diNE1JSUc5SUlyYlhrdFpXVnQKTFdkaGRHVjNZWGt0YVdKdExXVm5keTF6ZG1NdVpYWmxiblF0WVhWMGIyMWhkR2x2Ym9JdmJYa3RaV1Z0TFdkaApkR1YzWVhrdGFXSnRMV1ZuZHkxemRtTXVaWFpsYm5RdFlYVjBiMjFoZEdsdmJpNXpkbU9DUFcxNUxXVmxiUzFuCllYUmxkMkY1TFdsaWJTMWxaM2N0YzNaakxtVjJaVzUwTFdGMWRHOXRZWFJwYjI0dWMzWmpMbU5zZFhOMFpYSXUKYkc5allXeUNTVzE1TFdWbGJTMW5ZWFJsZDJGNUxXbGliUzFsWjNjdGNuUXRaWFpsYm5RdFlYVjBiMjFoZEdsdgpiaTVoY0hCekxtUmhiR1V0YkdGdVpTNWpjQzVtZVhKbExtbGliUzVqYjIyQ1RHMTVMV1ZsYlMxbllYUmxkMkY1CkxXbGliUzFsWjNjdGNuUXRNVGd0WlhabGJuUXRZWFYwYjIxaGRHbHZiaTVoY0hCekxtUmhiR1V0YkdGdVpTNWoKY0M1bWVYSmxMbWxpYlM1amIyMkNURzE1TFdWbGJTMW5ZWFJsZDJGNUxXbGliUzFsWjNjdGNuUXRNVFl0WlhabApiblF0WVhWMGIyMWhkR2x2Ymk1aGNIQnpMbVJoYkdVdGJHRnVaUzVqY0M1bWVYSmxMbWxpYlM1amIyMkNTMjE1CkxXVmxiUzFuWVhSbGQyRjVMV2xpYlMxbFozY3RjblF0TkMxbGRtVnVkQzFoZFhSdmJXRjBhVzl1TG1Gd2NITXUKWkdGc1pTMXNZVzVsTG1Od0xtWjVjbVV1YVdKdExtTnZiWUpKYlhrdFpXVnRMV2RoZEdWM1lYa3RhV0p0TFdWbgpkeTF5ZEMxbGRtVnVkQzFoZFhSdmJXRjBhVzl1TG1Gd2NITXVaR0ZzWlMxc1lXNWxMbU53TG1aNWNtVXVhV0p0CkxtTnZiWUpNYlhrdFpXVnRMV2RoZEdWM1lYa3RhV0p0TFdWbmR5MXlkQzB4TnkxbGRtVnVkQzFoZFhSdmJXRjAKYVc5dUxtRndjSE11WkdGc1pTMXNZVzVsTG1Od0xtWjVjbVV1YVdKdExtTnZiWUpMYlhrdFpXVnRMV2RoZEdWMwpZWGt0YVdKdExXVm5keTF5ZEMwMkxXVjJaVzUwTFdGMWRHOXRZWFJwYjI0dVlYQndjeTVrWVd4bExXeGhibVV1ClkzQXVabmx5WlM1cFltMHVZMjl0Z2t0dGVTMWxaVzB0WjJGMFpYZGhlUzFwWW0wdFpXZDNMWEowTFRndFpYWmwKYm5RdFlYVjBiMjFoZEdsdmJpNWhjSEJ6TG1SaGJHVXRiR0Z1WlM1amNDNW1lWEpsTG1saWJTNWpiMjJDUzIxNQpMV1ZsYlMxbllYUmxkMkY1TFdsaWJTMWxaM2N0Y25RdE55MWxkbVZ1ZEMxaGRYUnZiV0YwYVc5dUxtRndjSE11ClpHRnNaUzFzWVc1bExtTndMbVo1Y21VdWFXSnRMbU52YllKTGJYa3RaV1Z0TFdkaGRHVjNZWGt0YVdKdExXVm4KZHkxeWRDMDFMV1YyWlc1MExXRjFkRzl0WVhScGIyNHVZWEJ3Y3k1a1lXeGxMV3hoYm1VdVkzQXVabmx5WlM1cApZbTB1WTI5dGdreHRlUzFsWlcwdFoyRjBaWGRoZVMxcFltMHRaV2QzTFhKMExURXpMV1YyWlc1MExXRjFkRzl0CllYUnBiMjR1WVhCd2N5NWtZV3hsTFd4aGJtVXVZM0F1Wm5seVpTNXBZbTB1WTI5dGdrdHRlUzFsWlcwdFoyRjAKWlhkaGVTMXBZbTB0WldkM0xYSjBMVEl0WlhabGJuUXRZWFYwYjIxaGRHbHZiaTVoY0hCekxtUmhiR1V0YkdGdQpaUzVqY0M1bWVYSmxMbWxpYlM1amIyMkNTMjE1TFdWbGJTMW5ZWFJsZDJGNUxXbGliUzFsWjNjdGNuUXRNeTFsCmRtVnVkQzFoZFhSdmJXRjBhVzl1TG1Gd2NITXVaR0ZzWlMxc1lXNWxMbU53TG1aNWNtVXVhV0p0TG1OdmJZSk0KYlhrdFpXVnRMV2RoZEdWM1lYa3RhV0p0TFdWbmR5MXlkQzB4TVMxbGRtVnVkQzFoZFhSdmJXRjBhVzl1TG1GdwpjSE11WkdGc1pTMXNZVzVsTG1Od0xtWjVjbVV1YVdKdExtTnZiWUpMYlhrdFpXVnRMV2RoZEdWM1lYa3RhV0p0CkxXVm5keTF5ZEMweExXVjJaVzUwTFdGMWRHOXRZWFJwYjI0dVlYQndjeTVrWVd4bExXeGhibVV1WTNBdVpubHkKWlM1cFltMHVZMjl0Z2t4dGVTMWxaVzB0WjJGMFpYZGhlUzFwWW0wdFpXZDNMWEowTFRFd0xXVjJaVzUwTFdGMQpkRzl0WVhScGIyNHVZWEJ3Y3k1a1lXeGxMV3hoYm1VdVkzQXVabmx5WlM1cFltMHVZMjl0Z2t4dGVTMWxaVzB0CloyRjBaWGRoZVMxcFltMHRaV2QzTFhKMExURTFMV1YyWlc1MExXRjFkRzl0WVhScGIyNHVZWEJ3Y3k1a1lXeGwKTFd4aGJtVXVZM0F1Wm5seVpTNXBZbTB1WTI5dGdrdHRlUzFsWlcwdFoyRjBaWGRoZVMxcFltMHRaV2QzTFhKMApMVGt0WlhabGJuUXRZWFYwYjIxaGRHbHZiaTVoY0hCekxtUmhiR1V0YkdGdVpTNWpjQzVtZVhKbExtbGliUzVqCmIyMkNURzE1TFdWbGJTMW5ZWFJsZDJGNUxXbGliUzFsWjNjdGNuUXRNVGt0WlhabGJuUXRZWFYwYjIxaGRHbHYKYmk1aGNIQnpMbVJoYkdVdGJHRnVaUzVqY0M1bWVYSmxMbWxpYlM1amIyMkNURzE1TFdWbGJTMW5ZWFJsZDJGNQpMV2xpYlMxbFozY3RjblF0TVRRdFpYWmxiblF0WVhWMGIyMWhkR2x2Ymk1aGNIQnpMbVJoYkdVdGJHRnVaUzVqCmNDNW1lWEpsTG1saWJTNWpiMjJDVEcxNUxXVmxiUzFuWVhSbGQyRjVMV2xpYlMxbFozY3RjblF0TVRJdFpYWmwKYm5RdFlYVjBiMjFoZEdsdmJpNWhjSEJ6TG1SaGJHVXRiR0Z1WlM1amNDNW1lWEpsTG1saWJTNWpiMjB3RFFZSgpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFIa3dTRHhralZRaVEzc2phU1dGeVBqTExNNk5oaHVMcDR4REVyZW92Nk1JCldXTkdQRGF1alNQZXZLT1NzQ2lXTmkvM0VselZzaWpuOXp2QUdUSUZleUprUnQ2RGplRTB6bWxBRWJERU5HbnoKSmc4dURyZ1NlTGVCdFBLbXJvSHk1dzg0b2U3Qk9qeW1RcHVGZm01cU9aUDQ4Ry9RZFVVUHk0Z001dW9hREhPWAppZWN2Slh2RGRld0I1bnNGVkFZNGY3RU1OZDc1SVBKVm1lajJaMmdSbm1yZzZkWVVsUy9LOGZaRzdjQlFBdG9UCjdFMUlLbklSd256bkNnZHNCc2hCalpKNitna3JKbzB4Y2pESVp3RjhOVkoyMUFZV0FndFNaUXE3NjhoNkZxZU0KNHg3eFF4c2xseUdJZ0NoS0ZCVk5yUHBYOXRmYWhsUzZ5QkpwSFJEZU55OD0KLS0tLS1FTkQgQ0VSVElGSUNBVEUtLS0tLQoKLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURiRENDQWxTZ0F3SUJBZ0lRUGE2ME5NZ2V6N1NHSTh6TDcwa2RiVEFOQmdrcWhraUc5dzBCQVFzRkFEQlEKTVNZd0pBWURWUVFLRXgxSlFrMGdSWFpsYm5RZ1JXNWtjRzlwYm5RZ1RXRnVZV2RsYldWdWRERW1NQ1FHQTFVRQpBeE1kU1VKTklFVjJaVzUwSUVWdVpIQnZhVzUwSUUxaGJtRm5aVzFsYm5Rd0hoY05NalF3T1RBeE1USXdNVEF5CldoY05NalV3T1RBeE1USXdNVEF5V2pCUU1TWXdKQVlEVlFRS0V4MUpRazBnUlhabGJuUWdSVzVrY0c5cGJuUWcKVFdGdVlXZGxiV1Z1ZERFbU1DUUdBMVVFQXhNZFNVSk5JRVYyWlc1MElFVnVaSEJ2YVc1MElFMWhibUZuWlcxbApiblF3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRDRiNGhlK0hWQzk0TGtrQU5sCk81QkhvdTZjWXN2Q0Q5eUZndWEzeGtqS2VrQTJ0S0VIVEREVUJtWG9FTFdmT2dyem5KVmpidGhGaEFGUUtnT3QKVnNBb0plSUh2N1ZJNFplRGR5dlZsU0c1cllBL3NkdlUzdU9IL0l5UXZaaHAwZ1dNVEdNeDVDV096cWV4NUlVWgpaU21mY0FkT1cxWW1jVmlpVWprNmxtNFJQVWdHSlM5YXBMOWI0aFdXeVhQcjlPY1hJWDBoU1kvOGU0MDZGdWtuCnBzbHMxeWJVdEtrK3o1SWpVOCs1NTlrc0IxR3V0SHo1Sk8zUUtXSGU2b01EQ250eHMya2pjZU1JejQ5MHM3SnQKUjdIalhOOWZjT01CdHdwNVNHdWZTbWZKaHgyVGZaZU5jaUVjSWo2MndITUpZMHJVS1JkVGQzY05tMU1FYTZwQQpOYWhkQWdNQkFBR2pRakJBTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHCkExVWREZ1FXQkJRSlZnNXhwVWtHczRQd3RIdHk3VjB3bmdMUEJUQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUEKQ0VucEJhY2d0cUFwL2orVDRaR1N3QzN6bXk4V0UzQUxSTndTV3dCT3pyOTN5N3JSY3drVDhpYkJMbXVFalFsawpmVGlPWW52VFprKzdSSUMxaTYrT2Y0aWJ5UjdXVVlIWFM4bHBHZ2FDRTh2YUs0VFJ2ZUxHOU5IdnFrd2ppZzZ4CmZnVVZMN0FMYStrTGdPMU9HZnRvd0ppWW5leUdka1EwY2RiR3dSMkhOdC9VL2lrTEJ1NWJpQi9FaGZGMHhRZmYKTVoxQkhvZzV4bUpSaHVKUGJaY0ppbGU4YnpUOUE3d1Bkc3ROVWFRZHZQa0tNRHBXMnNXM2pwZnljYXRpaUZaVQpBUFJuRStRUXZ2eVhHYkNMZlhpQTNTUDVWOWRyVmdEVDJsUzlydVJCKzVpczZzSEJUY1haRHlheHE0TTdQNHF0CkhYK0prMWxMb042MGhuNUZ3OG5VM0E9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-consume-unlimited
+  namespace: event-automation
+data:
+  consumer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-f32bfdf3-redacted" password="b36f10d0-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-consume-25000
+  namespace: event-automation
+data:
+  consumer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-68a2ccbc-redacted" password="75369b63-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-consume-50000
+  namespace: event-automation
+data:
+  consumer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-f425b056-redacted" password="c77dd692-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-consume-75000
+  namespace: event-automation
+data:
+  consumer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-1a5796b5-redacted" password="069fa9e1-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-consume-25mbs
+  namespace: event-automation
+data:
+  consumer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-a66b98d4-redacted" password="9b63c9dc-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-produce-unlimited
+  namespace: event-automation
+data:
+  producer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    compression.type=gzip
+    acks=all
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-ea0607c8-redacted" password="f3131a03-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-produce-25000
+  namespace: event-automation
+data:
+  producer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    compression.type=gzip
+    acks=all
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-ed66efeb-redacted" password="1517da7e-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-produce-50000
+  namespace: event-automation
+data:
+  producer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    compression.type=gzip
+    acks=all
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-c07abfa6-redacted" password="3ada362b-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---
+kind: ConfigMap
+apiVersion: v1
+metadata:
+  name: quotas-produce-75000
+  namespace: event-automation
+data:
+  producer.properties: |-
+    bootstrap.servers=my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443
+    compression.type=gzip
+    acks=all
+    security.protocol=SASL_SSL
+    sasl.mechanism=PLAIN
+    sasl.jaas.config=org.apache.kafka.common.security.plain.PlainLoginModule required username="eem-ad8d9fbd-redacted" password="60f16030-redacted";
+    ssl.protocol=TLSv1.3
+    ssl.truststore.location=/certs/cluster/eem-ca.pem
+    ssl.truststore.type=PEM
+---

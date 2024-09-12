@@ -1,0 +1,13 @@
+dalelane@dales-mbp-2 eem-quotas % oc apply -f consume-50000.yaml
+job.batch/consumer-50000 created
+dalelane@dales-mbp-2 eem-quotas % oc logs -f --selector app=consumer-50000
+start.time,              end.time,                data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec,   rebalance.time.ms, fetch.time.ms, fetch.MB.sec, fetch.nMsg.sec
+2024-09-06 16:33:54:155, 2024-09-06 16:35:37:810, 610.3682,            5.8885, 5000136,               48238.2519, 3802,              99853,         6.1127,       50074.9702
+
+dalelane@dales-mbp-2 eem-quotas % oc delete -f consume-50000.yaml
+job.batch "consumer-50000" deleted
+dalelane@dales-mbp-2 eem-quotas % oc apply -f consume-50000.yaml
+job.batch/consumer-50000 created
+dalelane@dales-mbp-2 eem-quotas % oc logs -f --selector app=consumer-50000
+start.time,              end.time,                data.consumed.in.MB, MB.sec, data.consumed.in.nMsg, nMsg.sec,   rebalance.time.ms, fetch.time.ms, fetch.MB.sec, fetch.nMsg.sec
+2024-09-06 16:36:20:125, 2024-09-06 16:38:03:773, 610.4083,            5.8892, 5000465,               48244.6839, 3790,              99858,         6.1128,       50075.7576

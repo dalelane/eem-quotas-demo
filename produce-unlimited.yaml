@@ -1,0 +1,48 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: producer-unlimited
+spec:
+  template:
+    metadata:
+      labels:
+        app: producer-unlimited
+    spec:
+      imagePullSecrets:
+        - name: ibm-entitlement-key
+      containers:
+        - name: kafka-perf
+          image: cp.icr.io/cp/ibm-eventstreams-kafka:11.5.0
+          command:
+            - "/opt/kafka/bin/kafka-producer-perf-test.sh"
+            - "--topic"
+            - "QUOTA.PRODUCE.UNLIMITED"
+            - "--num-records"
+            - "5000000"
+            - "--record-size"
+            - "128"
+            - "--throughput"
+            - "-1"
+            - "--producer.config"
+            - "/config/producer.properties"
+          volumeMounts:
+            - mountPath: /certs/cluster
+              name: gateway-ca
+              readOnly: true
+            - mountPath: /config
+              name: producer-properties
+              readOnly: true
+      volumes:
+        - name: gateway-ca
+          secret:
+            items:
+            - key: eem-ca.pem
+              path: eem-ca.pem
+            secretName: eem-ca-cert
+        - name: producer-properties
+          configMap:
+            name: quotas-produce-unlimited
+      restartPolicy: Never
+  backoffLimit: 1
+  completions: 1
+  parallelism: 1

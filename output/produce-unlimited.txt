@@ -1,0 +1,31 @@
+dalelane@dales-mbp eem-quotas % oc apply -f produce-unlimited.yaml
+job.batch/producer-unlimited created
+dalelane@dales-mbp eem-quotas % oc logs -f --selector app=producer-unlimited
+324846 records sent, 64969.2 records/sec (7.93 MB/sec), 1325.4 ms avg latency, 2179.0 ms max latency.
+480187 records sent, 96037.4 records/sec (11.72 MB/sec), 3121.5 ms avg latency, 3849.0 ms max latency.
+467674 records sent, 93516.1 records/sec (11.42 MB/sec), 3779.6 ms avg latency, 3897.0 ms max latency.
+594235 records sent, 118847.0 records/sec (14.51 MB/sec), 3266.6 ms avg latency, 3951.0 ms max latency.
+477995 records sent, 95599.0 records/sec (11.67 MB/sec), 3235.2 ms avg latency, 3936.0 ms max latency.
+455858 records sent, 91116.9 records/sec (11.12 MB/sec), 4118.0 ms avg latency, 4391.0 ms max latency.
+484633 records sent, 96887.8 records/sec (11.83 MB/sec), 3567.3 ms avg latency, 3796.0 ms max latency.
+452487 records sent, 90479.3 records/sec (11.04 MB/sec), 4172.5 ms avg latency, 4688.0 ms max latency.
+523942 records sent, 104767.4 records/sec (12.79 MB/sec), 3104.9 ms avg latency, 3720.0 ms max latency.
+505591 records sent, 101098.0 records/sec (12.34 MB/sec), 3594.4 ms avg latency, 3750.0 ms max latency.
+5000000 records sent, 95472.685265 records/sec (11.65 MB/sec), 3387.08 ms avg latency, 4688.00 ms max latency, 3559 ms 50th, 4353 ms 95th, 4596 ms 99th, 4686 ms 99.9th.
+
+dalelane@dales-mbp eem-quotas % oc delete -f produce-unlimited.yaml
+job.batch "producer-unlimited" deleted
+dalelane@dales-mbp eem-quotas % oc apply -f produce-unlimited.yaml
+job.batch/producer-unlimited created
+dalelane@dales-mbp eem-quotas % oc logs -f --selector app=producer-unlimited
+423800 records sent, 84760.0 records/sec (10.35 MB/sec), 932.4 ms avg latency, 1815.0 ms max latency.
+588410 records sent, 117682.0 records/sec (14.37 MB/sec), 2655.5 ms avg latency, 3121.0 ms max latency.
+578210 records sent, 115503.4 records/sec (14.10 MB/sec), 2958.5 ms avg latency, 3159.0 ms max latency.
+441696 records sent, 88145.3 records/sec (10.76 MB/sec), 3790.4 ms avg latency, 4193.0 ms max latency.
+485335 records sent, 97067.0 records/sec (11.85 MB/sec), 3639.6 ms avg latency, 3977.0 ms max latency.
+407379 records sent, 81459.5 records/sec (9.94 MB/sec), 4074.2 ms avg latency, 4318.0 ms max latency.
+506870 records sent, 101374.0 records/sec (12.37 MB/sec), 3919.6 ms avg latency, 4410.0 ms max latency.
+558956 records sent, 111791.2 records/sec (13.65 MB/sec), 3061.4 ms avg latency, 3315.0 ms max latency.
+505741 records sent, 101128.0 records/sec (12.34 MB/sec), 3394.8 ms avg latency, 3664.0 ms max latency.
+461381 records sent, 92257.7 records/sec (11.26 MB/sec), 3680.8 ms avg latency, 3936.0 ms max latency.
+5000000 records sent, 99064.828023 records/sec (12.09 MB/sec), 3209.45 ms avg latency, 4410.00 ms max latency, 3308 ms 50th, 4253 ms 95th, 4351 ms 99th, 4397 ms 99.9th.

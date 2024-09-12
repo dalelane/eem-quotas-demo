@@ -1,0 +1,55 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: consumer-25mbs
+spec:
+  template:
+    metadata:
+      labels:
+        app: consumer-25mbs
+    spec:
+      imagePullSecrets:
+        - name: ibm-entitlement-key
+      containers:
+        - name: kafka-perf
+          image: cp.icr.io/cp/ibm-eventstreams-kafka:11.5.0
+          command:
+            - "/opt/kafka/bin/kafka-consumer-perf-test.sh"
+            - "--topic"
+            - "QUOTA.CONSUME.25MB"
+            - "--messages"
+            - "5000000"
+            - "--group"
+            - "$(MY_POD_NAME)"
+            - "--consumer.config"
+            - "/config/consumer.properties"
+            - "--timeout"
+            - "120000"
+            - "--bootstrap-server"
+            - "my-eem-gateway-ibm-egw-rt-1-event-automation.apps.dale-lane.cp.fyre.ibm.com:443"
+          volumeMounts:
+            - mountPath: /certs/cluster
+              name: gateway-ca
+              readOnly: true
+            - mountPath: /config
+              name: consumer-properties
+              readOnly: true
+          env:
+            - name: MY_POD_NAME
+              valueFrom:
+                fieldRef:
+                  fieldPath: metadata.name
+      volumes:
+        - name: gateway-ca
+          secret:
+            items:
+            - key: eem-ca.pem
+              path: eem-ca.pem
+            secretName: eem-ca-cert
+        - name: consumer-properties
+          configMap:
+            name: quotas-consume-25mbs
+      restartPolicy: Never
+  backoffLimit: 1
+  completions: 5
+  parallelism: 5

@@ -1,0 +1,15 @@
+apiVersion: eventstreams.ibm.com/v1beta2
+kind: KafkaTopic
+metadata:
+  labels:
+    eventstreams.ibm.com/cluster: my-kafka-cluster
+  name: quotatest
+  namespace: event-automation
+spec:
+  config:
+    min.insync.replicas: '1'
+    retention.bytes: '9000000000'
+    retention.ms: '43200000'
+  partitions: 1
+  replicas: 1
+  topicName: quotatest
